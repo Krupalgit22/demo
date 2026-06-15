@@ -4123,10 +4123,10 @@ section.promo-sec .breadcrumb-item+.breadcrumb-item:before {
 	background: linear-gradient(100deg, rgba(2, 14, 40, .98), rgba(2, 14, 40, .75) 35%, rgba(2, 14, 40, .25) 75%, rgba(2, 14, 40, .03));
 	z-index: 1
 } */
-.slider-sec2 .slide-item:before {
+/* .slider-sec2 .slide-item:before {
     background: linear-gradient(100deg, rgb(220 56 60 / 11%), rgb(220 56 60 / 9%) 35%, rgba(2, 14, 40, .25) 75%, rgba(2, 14, 40, .03));
     z-index: 1;
-}
+} */
 .slider-sec2 .slide-item .item-bg {
 	position: absolute;
 	left: 0;
