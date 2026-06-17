@@ -2083,7 +2083,8 @@ ul.ct-list li:before {
 .header-top .header-infos ul li,
 .header-top .header-infos ul li a {
 	color: #ED3538;
-	line-height: 1
+	line-height: 1;
+	font-size:large;
 }
 
 .header-top .header-infos ul li svg {
