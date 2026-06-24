@@ -525,9 +525,9 @@ info@shivraecom.co.uk">Email:
                      
                   </ul>
                </div>
-               <div class="d-sm-flex gap-4 gallery-single mb-5 pt-2">
-                  <img src="images/serv-g1.jpg" alt="" class="img-fluid round">
-                  <img src="images/serv-g2.jpg" alt="" class="img-fluid round">
+               <div class="d-sm-flex gap-4  mb-5 pt-2">
+                  <img src="images/newhome/uiuxfimg.png" alt="" class="img-fluid round w-100">
+                  <!-- <img src="images/serv-g2.jpg" alt="" class="img-fluid round"> -->
                </div>
                <!-- <p>Our Ocean Freight Services offer comprehensive solutions for all your shipping needs, ensuring your
                   cargo is transported efficiently and safely across the seas, giving you peace of mind and the best
@@ -748,7 +748,24 @@ info@shivraecom.co.uk">Email:
          });
       });
    </script>
+ <!-- Anti Inspect Script -->
+   <script>
+      document.addEventListener('contextmenu', function(e) {
+         e.preventDefault();
+      });
+
+      document.addEventListener('keydown', function(e) {
+         if (
+            e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) ||
+            (e.ctrlKey && e.key.toLowerCase() === 'u')
+         ) {
+            e.preventDefault();
+         }
+      });
+   </script>
 </body>
+
 
 
 </html>
