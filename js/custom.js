@@ -321,4 +321,13 @@
 //         e.preventDefault();
 //         return false;
 //     }
-// });
+// });  
+
+
+document.querySelectorAll('.nav-link.dropdown-toggle').forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    if (window.innerWidth > 991) {
+      window.location.href = this.getAttribute('href');
+    }
+  });
+});

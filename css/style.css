@@ -11173,4 +11173,21 @@ form.form.checkout-form input[type=checkbox] {
     height: 100%;
     background: rgba(49, 2, 3, 0.418); /* your #ED3538 overlay */
     pointer-events: none;
+} 
+
+/*---drowpdown---*/
+.mobile-split-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-split-dropdown .nav-link {
+    flex: 1;
+}
+
+.dropdown-arrow-btn {
+    background: transparent;
+    border: 0;
+    padding: 10px 14px;
+    color: inherit;
 }
