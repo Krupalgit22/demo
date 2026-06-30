@@ -11176,18 +11176,24 @@ form.form.checkout-form input[type=checkbox] {
 } 
 
 /*---drowpdown---*/
-.mobile-split-dropdown {
-    display: flex;
-    align-items: center;
+.dropdown-submenu {
+  position: relative;
 }
 
-.mobile-split-dropdown .nav-link {
-    flex: 1;
+.dropdown-submenu > .dropdown-menu {
+  display: none;
 }
 
-.dropdown-arrow-btn {
-    background: transparent;
-    border: 0;
-    padding: 10px 14px;
-    color: inherit;
+.dropdown-submenu > .dropdown-menu.show {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .dropdown-submenu > .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    margin-left: 15px;
+    border-left: 2px solid #ED3538;
+    box-shadow: none;
+  }
 }

@@ -188,7 +188,7 @@ info@shivraecom.co.uk">Email:
                                     </li>
 
                                                 <li class="dropdown-submenu dropend">
-                                                    <a class="dropdown-item dropdown-toggle submenu-toggle" href="#">
+                                                    <a class="dropdown-item dropdown-toggle submenu-toggle "  href="#">
                                                         Account Management
                                                     </a>
 
@@ -1221,7 +1221,22 @@ info@shivraecom.co.uk">Email:
          }
       });
    </script> -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".submenu-toggle").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
 
+      let submenu = this.nextElementSibling;
+
+      if (!submenu || !submenu.classList.contains("dropdown-menu")) return;
+
+      submenu.classList.toggle("show");
+    });
+  });
+});
+</script>
 
 </body>
 
