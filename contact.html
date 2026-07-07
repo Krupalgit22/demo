@@ -36,7 +36,14 @@
    <!-- Style CSS -->
    <link rel="stylesheet" href="css/style.css">
 
-   
+     <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EW3K4K4M9D');
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -543,7 +550,7 @@ info@shivraecom.co.uk">Email:
                   style="background: url(images/newhome//contactbg.png)no-repeat center center / cover;">
                   <div class="form-inner round">
                      <form method="post" action="contactFormNew.php" onsubmit="return validateForm();"
-                        action="https://templates.theme-village.com/transhub/demo/mailer.php">
+                       >
                         <div class="row">
                            <!-- Full Name -->
                            <div class="form-group col-lg-12">
@@ -575,6 +582,9 @@ info@shivraecom.co.uk">Email:
                                  rows="6"></textarea>
                               <i class="fa fa-pen"></i>
                            </div>
+<div class="col-md-12 mt-3">
+  <div class="g-recaptcha" data-sitekey="6LfBjUctAAAAAD0vgTQYqqE9yCs8WsKRPCl_5Sci"></div>
+</div>
 
                            <!-- Submit Button -->
                            <div class="col-12 mt-3">
@@ -874,53 +884,69 @@ function validateForm() {
     alert("Please enter message");
     return false;
   }
+ let captchaResponse = grecaptcha.getResponse();
 
-  return true;
-}
-</script> -->
-<script>
-    function validateForm() {
-
-    let name = document.getElementById("txtName").value.trim();
-    let email = document.getElementById("txtEmail1").value.trim();
-    let phone = document.getElementById("txtContact").value.trim();
-    let message = document.getElementById("txtMessage").value.trim();
-
-    if (name === "") {
-        alert("Please enter your name.");
-        return false;
-    }
-
-    const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-
-    if (email === "") {
-        alert("Please enter your email.");
-        return false;
-    }
-
-    if (!emailPattern.test(email)) {
-        alert("Please enter a valid email address.");
-        return false;
-    }
-
-    const phonePattern = /^[0-9]{10}$/;
-
-    if (phone === "") {
-        alert("Please enter your phone number.");
-        return false;
-    }
-
-    if (!phonePattern.test(phone)) {
-        alert("Please enter a valid 10-digit phone number.");
-        return false;
-    }
-
-    if (message === "") {
-        alert("Please enter your message.");
+    if (captchaResponse.length === 0) {
+        alert("Please complete the reCAPTCHA.");
         return false;
     }
 
     return true;
+  return true;
+}
+</script> -->
+<script>
+function validateForm() {
+  let name = document.getElementById("txtName").value.trim();
+  let email = document.getElementById("txtEmail1").value.trim();
+  let phone = document.getElementById("txtContact").value.trim();
+  let message = document.getElementById("txtMessage").value.trim();
+
+  if (name === "") {
+    alert("Please enter your name");
+    return false;
+  }
+
+  if (email === "") {
+    alert("Please enter your email");
+    return false;
+  }
+
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("Please enter valid email");
+    return false;
+  }
+
+  if (phone === "") {
+    alert("Please enter phone number");
+    return false;
+  }
+
+  let phonePattern = /^[0-9]{10}$/;
+  if (!phonePattern.test(phone)) {
+    alert("Please enter valid 10 digit phone number");
+    return false;
+  }
+
+  if (message === "") {
+    alert("Please enter message");
+    return false;
+  }
+
+  if (typeof grecaptcha === "undefined") {
+    alert("Captcha not loaded. Please refresh the page.");
+    return false;
+  }
+
+  let captchaResponse = grecaptcha.getResponse();
+
+  if (captchaResponse.length === 0) {
+    alert("Please complete the reCAPTCHA.");
+    return false;
+  }
+
+  return true;
 }
 </script>
 
