@@ -3210,7 +3210,7 @@ section.promo-sec .breadcrumb-item+.breadcrumb-item:before {
 
 /*! footer */
 .footer {
-	padding-top: 120px;
+	padding-top: 60px;
 	overflow: hidden
 }
 
@@ -3425,13 +3425,13 @@ section.promo-sec .breadcrumb-item+.breadcrumb-item:before {
 }
 
 .footer-widgets {
-	margin-top: 60px;
-	padding: 110px 0
+	margin-top: 30px;
+	padding: 60px 0
 }
 
 @media (max-width:991.98px) {
 	.footer-widgets {
-		padding: 100px 0 60px
+		padding: 60px 0 60px
 	}
 }
 
@@ -12246,7 +12246,7 @@ margin: 0px;
 }  
 
 
-/---thankyou---/
+/*---thankyou---*/
 
     .thankyou-section{
     padding:100px 0;
@@ -12433,4 +12433,110 @@ margin: 0px;
   .thankyou-box p {
     font-size: 16px;
   }
+} 
+
+/*---blog detail---*/
+.blog-details-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.blog-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 45px;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.blog-content h1 {
+  font-size: 42px;
+  line-height: 1.25;
+  margin-bottom: 25px;
+  color: #07112f;
+  font-weight: 700;
+}
+
+.blog-content h2 {
+  font-size: 28px;
+  margin: 35px 0 15px;
+  color: #07112f;
+  font-weight: 700;
+  position: relative;
+}
+
+.blog-content h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #ED3538;
+  display: block;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.blog-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.blog-content ul {
+  padding-left: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.blog-content ul li {
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 14px;
+  padding-left: 32px;
+  position: relative;
+}
+
+.blog-content ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #ED3538;
+}
+
+.blog-content strong {
+  color: #07112f;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .blog-details-section {
+    padding: 50px 0;
+  }
+
+  .blog-content {
+    padding: 25px 20px;
+    border-radius: 14px;
+  }
+
+  .blog-content h1 {
+    font-size: 28px;
+  }
+
+  .blog-content h2 {
+    font-size: 23px;
+  }
+
+  .blog-content p,
+  .blog-content ul li {
+    font-size: 15.5px;
+  }
+}  
+
+.amazon-intro-content h2 span {
+    color: #ED3538;
 }
