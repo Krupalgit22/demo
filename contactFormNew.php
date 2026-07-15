@@ -58,6 +58,15 @@ $adminBody = '<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>Mail to Admin</title>
+  <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWTZND422R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MWTZND422R');
+    </script>
+    
 </head>
 <body>
     <div bgcolor="#FFFFFF" marginwidth="0" marginheight="0">
@@ -140,6 +149,15 @@ $userBody = '<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>Mail to Client</title>
+  <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWTZND422R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MWTZND422R');
+    </script>
+    
 </head>
 <body>
     <div bgcolor="#FFFFFF" marginwidth="0" marginheight="0">
